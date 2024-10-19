@@ -13,7 +13,7 @@ const Header = () => {
             <Link href={'/'} 
               className={`p-0 text-xl leading-[30px]  font-roboto inline-block ${pathname === "/" ? "font-semibold text-primary-100" : "font-normal text-[#5c5c5c] "}`}
             >
-              <Image src="/assets/images/site-logo.png" width={100} height={100} alt='LOGO'/>
+              <Image src="/assets/images/site-logo.png" width={100} height={100} priority={true} alt='LOGO'/>
             </Link>
         </div>
 
