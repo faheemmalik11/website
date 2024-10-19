@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { usePathname } from "next/navigation";
+import Image from 'next/image';
 
 const Header = () => {
     const pathname = usePathname();
@@ -9,7 +10,11 @@ const Header = () => {
     <div className='flex align-middle justify-between gap-y-5 gap-x-[43px] pt-4 pb-[15px] px-[26px] border-b border-[#9fa9b7] sm:h-[63px]'>
 
         <div className='leftSide p-0 text-xl leading-[30px]  font-roboto inline-block font-normal text-[#5c5c5c]'>
-            Logo
+            <Link href={'/'} 
+              className={`p-0 text-xl leading-[30px]  font-roboto inline-block ${pathname === "/" ? "font-semibold text-primary-100" : "font-normal text-[#5c5c5c] "}`}
+            >
+              <Image src="/assets/images/site-logo.png" width={100} height={100} alt='LOGO'/>
+            </Link>
         </div>
 
         <div className='flex flex-wrap gap-y-2 gap-x-11 -mb-[3px]'>
