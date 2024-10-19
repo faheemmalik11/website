@@ -1,0 +1,11 @@
+// import {request} from '@/config/Request';
+
+export async function POST(req: { json: () => unknown; }) {
+    const data = await req.json();
+    // console.log("data: ", data)
+
+    
+    // const login = await request.post('login', data);
+
+    return Response.json({'success': true, "data": data});
+}
