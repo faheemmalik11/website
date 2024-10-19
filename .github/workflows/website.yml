@@ -1,8 +1,12 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: website
+run-name: ${{ github.actor }} has added GitHub Actions
+on:
+    push:
+      branches:
+        - main
+        # - dev
 jobs:
-  check-bats-version:
+  website:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
