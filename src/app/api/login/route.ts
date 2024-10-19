@@ -1,6 +1,8 @@
 // import {request} from '@/config/Request';
 
-export async function POST(req: { json: () => unknown; }) {
+import { NextRequest } from "next/server";
+
+export async function POST(req: Request | NextRequest) {
     const data = await req.json();
     // console.log("data: ", data)
 
